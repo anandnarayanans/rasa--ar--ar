@@ -1,0 +1,35 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- story: data ask EN
+  steps:
+  - intent: askdata_en
+  - action: action_fetch_employee_en
+
+  
+- story: data ask AR
+  steps:
+  - intent: askdata_ar
+  - action: action_fetch_employee_ar
+
+- story: fetch_employee_by_id
+  steps:
+    - intent: employeeid
+    - action: action_fetch_employee_id
+  
+- story: action_fetch_department_eng
+  steps:
+    - intent: department_en
+    - action: action_fetch_department_en
+
+- story: action_fetch_department_ara
+  steps:
+    - intent: department_ar
+    - action: action_fetch_department_ar

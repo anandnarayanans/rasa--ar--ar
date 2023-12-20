@@ -1,0 +1,72 @@
+version: "3.1"
+
+intents:
+  - greet
+  - askdata_ar
+  - askdata_en
+  - employeeid
+  - bot_challenge
+  - department_ar
+  - department_en
+  
+  
+
+actions:
+  - action_fetch_employee_en
+  - action_fetch_employee_ar
+  - action_fetch_employee_id
+  - action_fetch_department_en
+  - action_fetch_department_ar
+
+# slots:
+#       employee_id: {entity: employee_id}
+entities:
+  - employee_id:
+      type: regex
+      pattern: "[0-9]"
+
+  - emp_name_ar:  
+      type: regex
+      pattern: "[\u0600-\u06FF\u0750-\u077F]"
+
+  - emp_name:
+      type: regex
+      pattern: "[A-Za-z]*\ ?[A-Za-z]*"
+
+      
+slots:
+  employee_id:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: employee_id
+
+  emp_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: emp_name
+
+  emp_name_ar:
+      type: text
+      influence_conversation: true
+      mappings:
+      - type: from_entity
+        entity: emp_name_ar
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?- عايف"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_employee:
+  - text: "Sure, here is the requested employee information:"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

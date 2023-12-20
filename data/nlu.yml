@@ -1,0 +1,151 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - مرحبا
+    - سلام عليكم
+    - عايف
+    - تعطيك الصحة
+    - السلام
+    - كيفك
+    - أنت موجود؟
+    - تحيات
+    - تحية
+    - تحية طيبة
+    - شو أخبارك؟
+    - شكلك رائع
+    - كيف حالك اليوم؟
+    - كيف الحال؟
+    - كيف شعورك؟
+    - مرحبا أيها المستشار
+    - مرحبا للجميع
+    - مساء الخير
+    - مرحبا، أنا في حالجة إلى مساعدة
+    - يسرني لقاؤك
+    - من هذا؟
+    - مرحبا، أنا في حالجة إلى مساعدة
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: askdata_en
+  examples: |
+    - show me data
+    - data give
+    - data
+    - show me
+    - give me
+    - give me data
+    - everyone
+
+- intent: askdata_ar
+  examples: |
+    - أرني البيانات
+    - أعطني البيانات
+    - أعطني
+    - أرِنِي
+    - بيانات
+    - الجميع
+#Show me the data
+#Give me the data
+#Give me
+#Show me
+#data
+#everyone
+
+- intent: employeeid
+  examples: |
+    - give me the employee data for [1](employee_id) 
+    - data for [1](employee_id) 
+    - [1](employee_id) 
+    - give me the employee data for [2](employee_id) 
+    - data for [2](employee_id) 
+    - [2](employee_id)  - give me the employee data for [3](employee_id) 
+    - data for [3](employee_id) 
+    - [3](employee_id) 
+
+# # Department Inquiry (Arabic)
+# - intent: department_ar
+#   examples: |
+#     - أي قسم يعمل فيه أحمد؟ 
+#     - ما هو القسم الذي تتبعه سارة؟ 
+#     - أريد معرفة قسم علي 
+#     - ما هي أقسام عمل أحمد وسارة؟ 
+#     - أريد معرفة أقسام عمل جميع موظفينا.
+#     -  ما هي أقسام العمل للموظفين الذين يعملون في التسويق؟ 
+
+
+# #(Which department does Ahmed work in?)
+# #(What department is Sarah part of?)
+# #(I want to know Ali's department) 
+# # (What are the departments of work for Ahmed and Sarah?)  
+# # (I want to know the departments of work for all our employees.) 
+# # (What are the departments of work for employees who work in the marketing department?)
+
+- intent: department_en
+  examples: |
+
+    - Which department does [Ahmed](emp_name) work in?
+    - Which department does [Ahmed](emp_name) work in?
+    - [John](emp_name)  belongs to which department?
+    - [John Doe](emp_name)  belongs to which department?
+    - [Jane Smith](emp_name)  belongs to which department?
+    - [Jane](emp_name)  belongs to which department?
+    - [Joe Smith](emp_name)  belongs to which department?
+    - [Joe](emp_name)  belongs to which department?
+    - What department is [Sarah](emp_name) part of?
+    - I want to know [Ali](emp_name) department 
+    - department of [Anyone](emp_name)
+# - I want to know the departments of work for all our employees. 
+
+- intent: department_ar
+  examples: |
+
+    - في أي قسم يعمل [أحمد](emp_name_ar)؟
+    - [أحمد](emp_name_ar) في أي قسم؟
+    - [جون](emp_name_ar) يتبع أي قسم؟
+    - [جون دو](emp_name_ar) يتبع أي قسم؟
+    - [جين سميث](emp_name_ar) تتبع أي قسم؟
+    - [جين](emp_name_ar) تتبع أي قسم؟
+    - [جو سميث](emp_name_ar) يتبع أي قسم؟
+    - [جو](emp_name_ar) يتبع أي قسم؟
+    - أي قسم تتبع [سارة](emp_name_ar)؟
+    - أريد معرفة قسم [علي](emp_name_ar)
+    - قسم [أي شخص](emp_name_ar)
+
+- intent: salary_en
+  examples: |
+
+    - What is [person's name]'s salary?
+    - Can you tell me [person's name]'s current salary?
+    - How much john earns?
+    - how much salary john earns?
+    - how much salary john gets?
+    - how much salary john 
+
+
+- intent: salary_ar
+  examples: |
+  
+
+- intent: job_title_en
+  examples: |
+  
+- intent: job_title_ar
+  examples: |
+  
